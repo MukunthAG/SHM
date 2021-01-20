@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #EEE;
+} 
+h1 {
+    font-weight: 300;
+}
+.cardL, .cardR {
+    border: 5px solid rgba(36, 212, 183, 0.678);
+    width: 80%;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin: 20px 20px;
+    box-shadow: 13px 13px rgba(0,0,0,.15);
+    transition: all .4s ease;
+}
+.cardL:hover, .cardR:hover {
+    box-shadow: 9px 9px rgba(0,0,0,.25);
+} 
+.cardL {
+    float: left;
+}
+.cardR {
+    float: right;
+}
+.oddColor, .evenColor {
+    padding: 2px 16px;
+    background-color: #b3e3ff;
+    border-radius: 13px 13px 0px 0px;
+}
+.evenColor {
+    background-color: white !important;
+    border-radius: 0 0 13px 13px !important; 
+}
+#shm {
+    max-width: 800px;
+    overflow: hidden;
+}
+#absDer {
+    max-width: 800px;
+}
+#proof, #hints {
+    max-width: 800px;
+}
+a {
+    text-decoration: dotted;
+}

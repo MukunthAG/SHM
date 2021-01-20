@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <title>Undamped Oscillations</title>
+</head>
+<body>
+    <header style="margin: 0; text-align: center;">
+       <h1>Undamped Oscillations</h1> 
+    </header>
+    <div class = "cardL"> 
+        <div class="oddColor">
+            <h1>Recap</h1>
+        </div>
+        <div class="evenColor">
+            <h1>
+                Hooke's law : \(F = -kx\) or \(a = -w^2x\)<br><br>
+                can also be written as, \(\frac{d^2 x}{dt^2} + w^2x = 0\),<br><br>
+                where \(w = \sqrt{k \over m}\). <br><br>
+                Our objective is to find \(x\) as a function of time \(t\) or \(x(t)\) 
+            </h1>
+        </div>
+    </div>
+    <div class = "cardR" id = "shm">
+        <div id="calculator" style="width: 800px; height: 300px;"></div>
+    </div>
+    <div class = "cardR" id = "absDer">
+        <div class="oddColor">
+            <h1>Abstract Derivation of General Solution</h1>
+        </div>
+        <div class="evenColor">
+            <h1>
+                Given: \(\frac{d^2 x}{dt^2} + w^2x = 0\) &nbsp;(or) &nbsp; \(x'' + w^2x = 0\)
+                <br><br>
+                To find: \(x(t)\) for all \(t \ge 0\)
+                <br><br>
+                Solution: 
+                <br><br>
+                Assume that \(x = e^{\lambda t}\) is a solution for our equation*,
+                <br><br>    
+                By plugging in \(x'' = \lambda^2e^{\lambda t}\) and \(x = e^{\lambda t}\) in our given equation, we get,
+                \begin{align}
+                \lambda^2e^{\lambda t} + w^2e^{\lambda t} & = 0 \qquad (1)\\ \\
+                (\lambda^2 + w^2)e^{\lambda t} & = 0 \qquad (2)\\ \\
+                \lambda^2 + w^2 & = 0 \qquad (3)\\
+                \end{align}
+                <!-- <br> -->
+                By solving \((3)\) we get two solutions for \(\lambda\), where \(i = \sqrt{-1}\)
+                $$\lambda_1 = +iw \qquad (4)$$
+                $$\lambda_2 = -iw \qquad (5)$$
+                <!-- <br> -->
+                Therefore, two possible solutions of our equation is,
+                $$x_1 = c_1e^{\lambda_1 t} \qquad (6)$$ 
+                $$x_2 = c_2e^{\lambda_2 t} \qquad (7)$$ 
+                Substituting and adding equations \(4\) to \(7\), we get
+                $$x(t) = c_1e^{iwt} + c_2e^{-iwt} \qquad (8)$$
+            </h1>
+        </div>
+    </div>
+    <div class="cardL">
+        <div class="oddColor">
+            <h1>
+                Its never too late to start thinking!
+            </h1>
+        </div>
+        <div class="evenColor">
+            <h1>
+                <ol>
+                    <li>Why should one think that \(x = e^{\lambda t}\) is a really good guess as a solution?</li><br>
+                    <li>What does \(e\) (2.71..) has to do with an oscillating spring? or Why do we see this number everywhere?
+                    </li><br>
+                    <li>What one needs to know so that he can realize euler's formula as an obvious result?</li><br>
+                    <li>Is the identity in \(eq(10)\) always true? Even if \(A\) and \(B\) are imaginary? 
+                        Why should one care?
+                    </li>
+                </ol>
+            </h1> 
+        </div>
+    </div>
+    <div class="cardL">
+        <div class="oddColor">
+            <h1>
+                Simplifying our General Solution
+            </h1>
+        </div>
+        <div class="evenColor">
+            <h1>
+                In this section we will be using a famous relation called <strong>euler's formula</strong>*, 
+                $$e^{i\theta} = \cos\theta + i\sin\theta \qquad (9)$$ <br>
+                Applying \((9)\) in \((8)\), and some rearranging, 
+                $$x(t) = (c_1 + c_2)\cos(wt) +$$ 
+                $$\qquad i(c_1 - c_2)\sin(wt)$$
+                <br>
+                By grouping the constants, namely with <br><br> \(c_1 + c_2 = A\) and \(i(c_1 - c_2) = B\), we get, <br><br>
+                $$x(t) = A\cos(\omega t) + B\sin(\omega t)$$  <br> 
+                Further we know that*,
+                $$A\cos\theta\ +\ B\sin\theta\ = $$ $$\sqrt{A^{2}+B^{2}}\sin\left(\theta\ +\ \phi\right) \qquad (10)$$ 
+                Where \(\phi\ =\ \tan^{-1}\left(\frac{A}{B}\right)\).
+                Applying this in our general solution, we get,
+                <br><br>
+                $$\mathbf{x(t) = A\sin(\omega t + \phi)} $$
+                Where, $$\mathbf{A} = \sqrt{A^2+B^2}$$
+                $$\phi\ =\ \tan^{-1}\left(\frac{A}{B}\right)$$
+            </h1>
+        </div>
+    </div>
+    <div class="cardR" id = "proof">
+        <div class="oddColor">
+            <h1>Proof for \(eq(10)\)</h1>
+        </div>
+        <div class="evenColor" style="padding: 0; margin: 0; overflow: hidden;">
+            <img src="identity.jpg" width="100%" >
+        </div>
+    </div>
+    <div class = "cardR" id = "hints">
+        <div class="oddColor">
+            <h1>Hints and References</h1>
+        </div>
+        <div class="evenColor">
+            <h1>
+                <ol>
+                    <li>Think about, how did we derive the solution for \(y' + P(x)y = Q(x)\) type of equations and what was the solution for it?</li><br>
+                    <li>The origin of \(e\) is from an observation that, some number between 2 and 3 raised to the power of \(x\), must have its derivative equal to its value itself.
+                        <br><br>
+                        <ul>
+                            <li>
+                                <a target = "_blank" href = "https://www.youtube.com/watch?v=m2MIpDrF7Es">What's so special about \(e\)?</a>
+                            </li>
+                            <li>
+                                <a target = "_blank" href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">From where does taylor's series comes from and what does it have to do with \(e\)?</a>
+                            </li>
+                        </ul>
+                    </li> <br>
+                    <li>
+                        Refer the following videos <br><br>
+                        <ul>
+                        <li>
+                        <a target = "_blank" href="https://www.youtube.com/watch?v=ZxYOEwM6Wbk">What is Euler's formula actually saying?
+                        </a>
+                        </li>
+                        <li>
+                            <a target = "_blank" href="https://www.youtube.com/watch?v=v0YEaeIClKY">Why \(e^{i\pi} = -1\)?
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                        Clearly if \(A\) and \(B\) were complex, we can do, 
+                        \begin{align}
+                        Z &= A\cos \theta + B\sin \theta\\
+                        &= (a+ib)\cos \theta + (c+id)\sin \theta \\
+                        &= (a\cos \theta + c\sin \theta) + i(b\cos \theta + d\sin \theta) \\ 
+                        &= \sqrt{a^2 +c^2}\sin(\theta + \phi_1) + i\sqrt{b^2 +d^2}\sin(\theta + \phi_2) \\
+                        \end{align} 
+                        Which has an imaginary term in it, hence for our general solution to have only real particular solutions 
+                        \(A\) and \(B\) must be real. <br>
+                        Only under this assumption, \(eq(10)\) is valid.
+                    </li>
+                </ol>
+            </h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
