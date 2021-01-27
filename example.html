@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Solution</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style="margin: 0; text-align: center;">
+        <h1 style="font-size: 50px;">Solution</h1> 
+     </header>
+    <div class="cardL" id = "sol">
+        <div class="oddColor">
+            <h1>If a mass–spring system with an iron ball of weight \(W = 98\)N can be regarded as undamped, and
+                the spring is such that the ball stretches it \(1.09\)m, how many cycles per minute will the system
+                execute? What will its motion be if we pull the ball down from rest by \(16\)cm and let it start with
+                zero initial velocity</h1>
+        </div>
+        <div class="evenColor">
+            <h1>
+                Before solving the problem, we need to find a few values from the given data,
+                $$F = -kx$$
+                Plugging in \(x = 1.09\)m in our equation, where the force against gravity is \(F=98\)N
+                We get, $$k = \frac{98}{1.09} = 89.9\frac{N}{m}$$
+                The mass \(m = 98/9.8\) would be \(10\)Kg. 
+                Hence by \(\omega = \sqrt{\frac{k}{m}}\), we get,
+                $$f = \frac{\omega}{2\pi} = 0.483\frac{\mathrm{cycles}}{\mathrm{sec}}$$ 
+                Provided that we have the amplitude \(A = 0.16\) and \(\omega = 3\), we can write the
+                equation of motion as, $$\mathbf{x(t) = 0.16\sin(3t + \frac{\pi}{2})}$$
+            </h1>
+        </div>
+    </div>
+</body>
+</html>
