@@ -48,24 +48,6 @@ h1 {
 a {
     text-decoration: dotted;
 }
-.think {
-    -webkit-filter: blur(3.5px);
-    -moz-filter: blur(3.5px);
-    -o-filter: blur(3.5px);
-    -ms-filter: blur(3.5px);
-    filter: blur(3.5px);
-    transition: all .4s ease;
-    background-color: white;
-}
-
-.think:hover {
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px);
-}
-
 #sol {
     max-width: 1300px;
     width: 1300px;
