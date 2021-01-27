@@ -12,10 +12,8 @@
 <body>
     <header style="margin: 0; text-align: center;">
        <h1 style="font-size: 50px;">Undamped Oscillations</h1> 
-       <h2 style = "font-weight: 300;">(This page is not responsive and may look different in different devices,<br>the best one can do is to zoom in and out untill the page fits the screen nicely)</h2>
-        <h2 style = "font-weight: 300;">Copy paste this link(https://www.desmos.com/calculator/hsj2jexulk) as a first expression in our graph, to import the SHM graph.</h2>
     </header>
-    <div class = "cardL"> 
+    <div class = "cardL" id="recap"> 
         <div class="oddColor">
             <h1>Recap</h1>
         </div>
@@ -73,11 +71,11 @@
         <div class="evenColor">
             <h1>
                 <ol>
-                    <li>Why should one think that \(x = e^{\lambda t}\) is a really good guess as a solution?</li><br>
-                    <li>What does \(e\) (2.71..) has to do with an oscillating spring? or Why do we see this number everywhere?
+                    <li class = "think">Why should one think that \(x = e^{\lambda t}\) is a really good guess as a solution?</li><br>
+                    <li class = "think">What does \(e\) (2.71..) has to do with an oscillating spring? or Why do we see this number everywhere?
                     </li><br>
-                    <li>What one needs to know so that he can realize euler's formula as an obvious result?</li><br>
-                    <li>Is the identity in \(eq(10)\) always true? Even if \(A\) and \(B\) are imaginary? 
+                    <li class = "think">What one needs to know so that he can realize euler's formula as an obvious result?</li><br>
+                    <li class = "think">Is the identity in \(eq(10)\) always true? Even if \(A\) and \(B\) are imaginary? 
                         Why should one care?
                     </li>
                 </ol>
@@ -103,7 +101,7 @@
                 Further we know that*,
                 $$A\cos\theta\ +\ B\sin\theta\ = $$ $$\sqrt{A^{2}+B^{2}}\sin\left(\theta\ +\ \phi\right) \qquad (10)$$ 
                 Where \(\phi\ =\ \tan^{-1}\left(\frac{A}{B}\right)\).
-                Applying this in our general solution, we get,
+                Applying this in our general solution, we get the frequency as,
                 <br><br>
                 $$\mathbf{x(t) = A\sin(\omega t + \phi)} $$
                 Where, $$\mathbf{A} = \sqrt{A^2+B^2}$$
@@ -174,7 +172,21 @@
             </h1>
         </div>
     </div>
+    <div class="cardL">
+        <div class="oddColor">
+            <h1>A Problem from Erwin Kreyszig</h1>
+        </div>
+        <div class="evenColor">
+            <h1>If a mass–spring system with an iron ball of weight \(W = 98\)N can be regarded as undamped, and
+the spring is such that the ball stretches it \(1.09\)m, how many cycles per minute will the system
+execute? What will its motion be if we pull the ball down from rest by \(16\)cm and let it start with
+zero initial velocity</h1>
+            <img src="spring.png" alt="spring model" width = "100%">
+            <br><br>
+        <h1><a href = "example.html">View Solution</a></h1>
+        </div>
+        
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
-
